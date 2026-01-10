@@ -1,6 +1,7 @@
 import './index.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const MainPage = () => {
   const [data, setData] = useState([]);
   const URL =
@@ -20,7 +21,7 @@ const MainPage = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div id="header">
         <div id="header-area">
           <img src="images/icons/logo.png" alt="로고이미지" />
@@ -34,36 +35,42 @@ const MainPage = () => {
         <h1>[Products to sale^^]</h1>
 
         <div id="product-list">
-          {data.map((product) => (
-            <div className="product-card" key={product.id}>
-              <div>
-                <img
-                  className="product-img"
-                  src={product.imgUrl}
-                  alt="농구공1"
-                />
+          {data.map((product, index) => {
+            return (
+              <div className="product-card" key={product.id}>
+                <Link to={`/products/${index}`} className="product-link">
+                  <div>
+                    <img
+                      className="product-img"
+                      src={product.imgUrl}
+                      alt="농구공1"
+                    />
+                  </div>
+                  <div className="product-contents">
+                    <span className="product-name">{product.name}</span>
+                    <span className="product-price">
+                      가격: {product.price}원
+                    </span>
+                    <div className="product-seller">
+                      <img
+                        className="product-avatar"
+                        src={product.seller[0]}
+                        alt="아바타그림"
+                      />
+                      <span>{product.seller[1]}</span>
+                    </div>
+                  </div>
+                </Link>
               </div>
-              <div className="product-contents">
-                <span className="product-name">{product.name}</span>
-                <span className="product-price">가격: {product.price}원</span>
-                <div className="product-seller">
-                  <img
-                    className="product-avatar"
-                    src={product.seller[0]}
-                    alt="아바타그림"
-                  />
-                  <span>{product.seller[1]}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
       <div id="footer">
         <span>© 2026 BYH Market</span>
       </div>
-    </>
+    </div>
   );
 };
 
