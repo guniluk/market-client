@@ -1,6 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
 html,
 body,
 #root {
   font-family: Arial, sans-serif;
   height: 100%;
+}
+
+#header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+#body {
+  height: 100vh;
+  width: 1024px;
+  margin: 0 auto;
+  padding-bottom: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer {
+  height: 100px;
+  background-color: hsl(0, 8%, 73%);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+}
+
+#header-area {
+  width: 1024px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-area img {
+  width: 128px;
+  height: 36px;
 }

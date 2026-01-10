@@ -1,0 +1,50 @@
+#image-box {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#image-box img {
+  max-height: 100%;
+}
+
+#profile-box {
+  padding: 16px;
+  margin-top: 8px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+#profile-box > img {
+  height: 40px;
+}
+#profile-box > span {
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+#content-box {
+  padding: 16px;
+}
+#name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+#price {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+#description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+#createdAt {
+  font-size: 12px;
+  color: #888;
+}
