@@ -1,0 +1,46 @@
+#upload-container {
+  margin-top: 36px;
+}
+
+#upload-img-placeholder {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 77%);
+  background-color: hsl(0, 5%, 95%);
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  margin-left: 16px;
+}
+#upload-img-placeholder:hover {
+  border-color: #007bff;
+}
+#camera {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.upload-name {
+  width: 200px;
+}
+
+#upload-label {
+  font-size: 18px;
+  width: 80px;
+}
+#product-description {
+  height: 100px;
+}
+
+#submit-button {
+  /* 오른쪽으로 보내기 
+  */
+  float: right;
+  margin-top: 10px;
+}

@@ -19,7 +19,7 @@ body,
 }
 
 #body {
-  height: 100vh;
+  min-height: calc(100vh - 60px - 100px);
   width: 1024px;
   margin: 0 auto;
   padding-bottom: 2px;
